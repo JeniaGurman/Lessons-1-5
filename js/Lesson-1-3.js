@@ -207,11 +207,11 @@ console.log(checkAge(20));
 // }
 // console.log(checkFileExtension("styles.css", ".js"));
 // //////////////////////////////////////
-// function getFileName(file) {
-//     if (file.indexOf(".") !== -1) {return file.slice ((0), file.indexOf(".")) } else {return file}
+function getFileName(file) {
+    if (file.indexOf(".") !== -1) {return file.slice ((0), file.indexOf(".")) } else {return file}
 
-// }
-// console.log(getFileName("index.js"));
+}
+console.log(getFileName("index.js"));
 // //////////////////////////////////////
 // function createFileName(name, ext) {
 //     return name.trim() +`.` + ext.trim(``);
@@ -376,15 +376,15 @@ function getCommonElements(array1, array2) {
 const resultTotal = getCommonElements([1, 2, 3], [2, 1, 17, 19])
 console.log(resultTotal);
 ////////////////////////////
-function calculateTotalPrice(order) {
-    let total = 0;
-    for (let element of order) {
-        total += element;
-    }
-    return total;
-}
-const result = calculateTotalPrice([12, 85, 37, 4])
-console.log(result);
+// function calculateTotalPrice(order) {
+//     let total = 0;
+//     for (let element of order) {
+//         total += element;
+//     }
+//     return total;
+// }
+// const result = calculateTotalPrice([12, 85, 37, 4])
+// console.log(result);
 ///////////////////////////////
 function createReversedArray() {
     const arr = Array.from(arguments)
@@ -419,21 +419,748 @@ console.log(makeArray(["Earth", "Jupiter"], ["Neptune", "Uranus"], 2)); // ["Ear
 console.log(makeArray(["Earth", "Jupiter"], ["Neptune", "Uranus"], 4)); // ["Earth", "Jupiter", "Neptune", "Uranus"]
 console.log(makeArray(["Earth", "Jupiter"], ["Neptune", "Uranus", "Venus"], 0)); // []
 //////////////////////////////////////////////////////////
-function filterArray(numbers, value) {
-    let total = []
-    for ( let number of numbers) {
-        if (value  < number) { total.push(number)
+// function filterArray(numbers, value) {
+//     let total = []
+//     for ( let number of numbers) {
+//         if (value  < number) { total.push(number)
 
-        }
-    }
-    return total;
+//         }
+//     }
+//     return total;
     
+// }
+// console.log(filterArray([1, 2, 3, 4, 5], 3)); // [4, 5]
+// console.log(filterArray([1, 2, 3, 4, 5], 4)); // [5]
+// console.log(filterArray([1, 2, 3, 4, 5], 5)); // []
+// console.log(filterArray([12, 24, 8, 41, 76], 38)); // [41, 76]
+// console.log(filterArray([12, 24, 8, 41, 76], 20)); // [24, 41, 76]
+////////////4 lesson////////////////////
+// const apartment = {
+//     imgUrl: "https://via.placeholder.com/640x480",
+//     descr: "Spacious apartment in the city center",
+//     rating: 4,
+//     price: 2153,
+//     tags: ["premium", "promoted", "top"]
+
+// }
+////////////////////////////////////////////
+// const apartment = {
+//   imgUrl: "https://via.placeholder.com/640x480",
+//   descr: "Spacious apartment in the city center",
+//   rating: 4,
+//   price: 2153,
+//   tags: ["premium", "promoted", "top"],
+//   owner: {
+//     name: "Henry",
+//     phone: "982-126-1588",
+//     email: "henry.carter@aptmail.com",
+//   },
+//   };
+// apartment.price = 5000;
+// apartment.rating = 4.7;
+// apartment.owner.name = "Henry Sibola";
+// apartment.tags.push("trusted")
+///////////////////////////////////
+// const apartment = {
+//   imgUrl: "https://via.placeholder.com/640x480",
+//   descr: "Spacious apartment in the city center",
+//   rating: 4.7,
+//   price: 5000,
+//   tags: ["premium", "promoted", "top", "trusted"],
+//   owner: {
+//     name: "Henry Sibola",
+//     phone: "982-126-1588",
+//     email: "henry.carter@aptmail.com",
+//   },
+// };
+// apartment.area = 60;
+// apartment.rooms = 3;
+// apartment.location = {
+//   country: "Jamaica",
+//   city: "Kingston"
+// }
+//////////////////////////////////////
+const name = "Repair Droid";
+const price = 2500;
+const image = "https://via.placeholder.com/640x480";
+const tags = ["on sale", "trending", "best buy"];
+
+const product = {
+  name,
+  price,
+  image,
+  tags
+};
+///////////////////////////////
+const emailInputName = "email";
+const passwordInputName = "password";
+
+const credentials = {
+  [emailInputName]: "henry.carter@aptmail.com",
+  [passwordInputName]: "jqueryismyjam",
+};
+///////////////////////////////////
+
+// const apartment = {
+//   descr: "Spacious apartment in the city center",
+//   rating: 4,
+//   price: 2153,
+// };
+
+
+// const keys = [];
+// const values = [];
+// for (let key in apartment){
+// keys.push(key);
+// values.push(apartment[key])
+// }
+// console.log(keys);   // ["descr", "rating", "price"]
+// console.log(values);
+/////////////////////////////////
+// const books = {
+//     Year: 2000,
+//     author: "kipling",
+//     name: "aggy",
+// };
+
+// const properties = []
+// const data = []
+// for (const book in books) {
+//     properties.push(book);
+//     data.push(books[book]);
+
+// };
+// console.log(properties);
+// console.log(data);
+/////////////////////
+// const apartment = {
+//   descr: "Spacious apartment in the city center",
+//   rating: 4,
+//   price: 2153,
+// };
+// const values = [];
+// const keys = Object.keys(apartment);
+// for (const key of keys) {
+//     values.push(apartment[key])
+// };
+// console.log(keys);
+// console.log(values);
+///////////////////////////////
+function countProps(object) {
+  let propCount = Object.keys(object).length;  
+
+  return propCount;
 }
-console.log(filterArray([1, 2, 3, 4, 5], 3)); // [4, 5]
-console.log(filterArray([1, 2, 3, 4, 5], 4)); // [5]
-console.log(filterArray([1, 2, 3, 4, 5], 5)); // []
-console.log(filterArray([12, 24, 8, 41, 76], 38)); // [41, 76]
-console.log(filterArray([12, 24, 8, 41, 76], 20)); // [24, 41, 76]
+console.log(countProps({ mail: "poly@mail.com", isOnline: true, score: 500 }));
+/////////////////////////////////////
+const apartment = {
+  descr: "Spacious apartment in the city center",
+  rating: 4,
+  price: 2153,
+};
+
+const keys = Object.keys(apartment);
+const values = Object.values(apartment);
+console.log(keys);
+console.log(values);
+//////////////////////////////////
+function countTotalSalary(salaries) {
+    let totalSalary = 0;
+    const sum = Object.values(salaries);
+    for (const value of sum) {
+        totalSalary += value;
+    }
+    return totalSalary;
+     
+};
+console.log(countTotalSalary({ mango: 100, poly: 150, alfred: 80 }));
+/////////////////////////////////
+const colors = [
+  { hex: "#f44336", rgb: "244,67,54" },
+  { hex: "#2196f3", rgb: "33,150,243" },
+  { hex: "#4caf50", rgb: "76,175,80" },
+  { hex: "#ffeb3b", rgb: "255,235,59" },
+];
+
+const hexColors = [];
+const rgbColors = [];
+for (const color of colors) {
+    hexColors.push(color.hex);
+    rgbColors.push(color.rgb);
+
+}
+console.log(hexColors);
+console.log(rgbColors);
+/////////////////////////
+function getProductPrice(productName) {
+  const products = [
+    { name: "Radar", price: 1300, quantity: 4 },
+    { name: "Scanner", price: 2700, quantity: 3 },
+    { name: "Droid", price: 400, quantity: 7 },
+    { name: "Grip", price: 1200, quantity: 9 },
+    ];
+    for (const product of products) {
+        if (product.name === productName) {return product.price }
+        
+    }
+       return null;  
+    }
+console.log(getProductPrice("Radar"));
+////////////////////////////////////
+    function getAllPropValues(propName) {
+  const products = [
+    { name: "Radar", price: 1300, quantity: 4 },
+    { name: "Scanner", price: 2700, quantity: 3 },
+    { name: "Droid", price: 400, quantity: 7 },
+    { name: "Grip", price: 1200, quantity: 9 },
+        ];
+        const item = [];
+        for (const product of products) {
+            if (propName in product) {
+              item.push(product[propName]) 
+            }
+            
+        }
+        return item;
+}
+console.log(getAllPropValues("quantity"));
+//////////////////////////////////////
+// function calculateTotalPrice(productName) {
+//   const products = [
+//     { name: "Radar", price: 1300, quantity: 4 },
+//     { name: "Scanner", price: 2700, quantity: 3 },
+//     { name: "Droid", price: 400, quantity: 7 },
+//     { name: "Grip", price: 1200, quantity: 9 },
+//     ];
+    
+//     for (const product of products) {
+//         if (productName === product.name) {
+//             return product.price * product.quantity
+//         }
+//     }
+//     return `Product ${productName} not found!`
+// }
+// console.log(calculateTotalPrice("Blaster"));
+//////////////////////////////////////
+// const atTheOldToad = {
+//   potions: ["Speed potion", "Stone skin"],
+//   getPotions() {
+//     return this.potions;
+//     },
+    
+// };
+// console.log(atTheOldToad.getPotions());
+////////////////////////////////////
+// const atTheOldToad = {
+//   potions: ["Speed potion", "Stone skin"],
+//   getPotions() {
+//     return this.potions;
+//   },
+//     addPotion(potionName) {
+//       this.potions.push(potionName)
+//   }
+// };
+// atTheOldToad.addPotion("Invisibility");
+// console.log(atTheOldToad.getPotions());
+////////////////////////////////
+const atTheOldToad = {
+  potions: [
+    { name: "Speed potion", price: 460 },
+    { name: "Stone skin", price: 520 },
+  ],
+  getPotions() {
+    return this.potions;
+  },
+  addPotion(newPotion) {
+    this.potions.push(newPotion);
+  },
+    getTotalPrice() {
+        let total = 0;
+        for (const potion of this.potions) {
+            total += potion.price;
+        }
+        return total;
+    },
+    
+};
+//////////////////////////////
+function calcAverageCalories(days) {
+    let totalCalories = 0;
+    for (let day of days) {
+        totalCalories += day.calories
+    }
+    if (totalCalories <= 0) { return totalCalories } else {
+        return totalCalories / days.length
+    }
+}
+console.log(
+  calcAverageCalories([
+    { day: "monday", calories: 3010 },
+    { day: "tuesday", calories: 3200 },
+    { day: "wednesday", calories: 3120 },
+    { day: "thursday", calories: 2900 },
+    { day: "friday", calories: 3450 },
+    { day: "saturday", calories: 3280 },
+    { day: "sunday", calories: 3300 }
+  ])
+); // 3180
+
+console.log(
+  calcAverageCalories([
+    { day: "monday", calories: 2040 },
+    { day: "tuesday", calories: 2270 },
+    { day: "wednesday", calories: 2420 },
+    { day: "thursday", calories: 1900 },
+    { day: "friday", calories: 2370 },
+    { day: "saturday", calories: 2280 },
+    { day: "sunday", calories: 2610 }
+  ])
+); // 2270
+
+console.log(
+  calcAverageCalories([])
+); // 0
+/////////////////////////////
+const profile = {
+    username: "Jacob",
+    playTime: 300,
+
+    changeUsername(newName) {
+        this.username = newName;
+    },
+    updatePlayTime(hours) {
+        this.playtime += hours
+    },
+    getInfo() {
+        return `${this.username} has ${this.playTime} active hours!`
+    }
+};
+console.log(profile.getInfo()); // "Jacob has 300 active hours!"
+
+profile.changeUsername("Marco");
+console.log(profile.getInfo()); // "Marco has 300 active hours!"
+
+profile.updatePlayTime(20);
+console.log(profile.getInfo()); // "Marco has 320 active hours!"
+
+/////////////////////////////
+function add(...args) {
+return args.reduce((sum, num) => sum + num, 0);
+}
+////////////////////////////////////////
+function addOverNum(value, ...args) {
+  let total = 0;
+  for (const arg of args) {
+    if (value < arg) {
+      total += arg
+    }
+  }
+  return total;
+}
+console.log(addOverNum(10, 12, 4, 11, 48, 10, 8));
+/////////////////////////////////////
+function getExtremeScores(scores) {
+  const max = Math.max(...scores);
+  const min = Math.min(...scores);
+  return `best:${max},worst:${min}` 
+}
+console.log(getExtremeScores([89, 64, 42, 17, 93, 51, 26]));
+///////////////////////////////
+const firstGroupScores = [64, 42, 93];
+const secondGroupScores = [89, 14, 51, 26];
+const thirdGroupScores = [29, 47, 18, 97, 81];
+
+const allScores = [...firstGroupScores, ...secondGroupScores, ...thirdGroupScores];
+const bestScore = Math.max(...allScores);
+const worstScore = Math.min(...allScores);
+/////////////////////////////////////
+const defaultSettings = {
+  theme: "light",
+  public: true,
+  withPassword: false,
+  minNumberOfQuestions: 10,
+  timePerQuestion: 60,
+};
+const overrideSettings = {
+  public: false,
+  withPassword: true,
+  timePerQuestion: 30,
+};
+
+const finalSettings = { ...defaultSettings, ...overrideSettings };
+////////////////////////////////
+function isEnoughCapacity(products, containerSize) {
+    let total = 0;
+    for (const product in products) {
+        total += products[product];
+       
+    }
+    
+    return total <= containerSize;
+}
+console.log(
+  isEnoughCapacity({ apples: 2, grapes: 3, carrots: 1 }, 8)
+); // true
+
+console.log(
+  isEnoughCapacity({ apples: 4, grapes: 6, lime: 16 }, 12)
+); // false
+
+console.log(
+  isEnoughCapacity({ apples: 1, lime: 5, tomatoes: 3 }, 14)
+); // true
+
+console.log(
+  isEnoughCapacity({ apples: 18, potatoes: 5, oranges: 2 }, 7)
+); // false
+///////////5 lesson///////////////////
+function makePizza(pizzaName, callback) {
+  console.log(`Pizza ${pizzaName} is being prepared, please wait...`);
+  callback(pizzaName);
+}
+
+makePizza("Royal Grand", function deliverPizza(pizzaName) {
+  console.log(`Delivering pizza ${pizzaName}`);
+});
+
+makePizza("Ultracheese", function eatPizza(pizzaName) {
+  console.log(`Eating pizza ${pizzaName}`)
+  
+});
+///////////////////////////////////
+// function calculateTotalPrice(orderedItems) {
+//   let totalPrice = 0;
+
+//     orderedItems.forEach(function(number) {
+//         totalPrice += number;
+//   });
+
+//   return totalPrice;
+// }
+// console.log(calculateTotalPrice([12, 85, 37, 4]));
+////////////////////////////////////
+function filterArray1(numbers, value) {
+    let total = [];
+    numbers.forEach(function (number) {
+        if (number > value) {
+            return total.push(number)
+        }
+    })
+    return total;
+}
+console.log(filterArray1([1, 2, 3, 4, 5], 3));
+////////стрілочні функції /////////
+const calculateTotalPrice1 = (quantity, pricePerItem) => {
+  return quantity * pricePerItem;
+}
+////////////варіани повернення////(явне)/////
+// const calculateTotalPrice = (quantity, pricePerItem) => {
+//   return quantity * pricePerItem;
+// };
+///////////(неявне)///////////////////
+const calculateTotalPrice2 = (quantity, pricePerItem) => quantity * pricePerItem;
+////////////////////////////////////////
+const calculateTotalPrice3 = (orderedItems) => {
+  let totalPrice = 0;
+
+  orderedItems.forEach((item) => {
+    totalPrice += item;
+  });
+
+  return totalPrice;
+}
+console.log(calculateTotalPrice3([12, 85, 37, 4]));
+///////////////////////////////
+const filterArray = (numbers, value) => {
+  const filteredNumbers = [];
+
+  numbers.forEach((number) => {
+    if (number > value) {
+      filteredNumbers.push(number);
+    }
+  });
+
+  return filteredNumbers;
+}
+console.log(filterArray([1, 2, 3, 4, 5], 4));
+////////////////////////////
+const changeEven = (numbers, value) => {
+    let newChangeEven = [];
+    numbers.forEach((number) => {
+        if (number % 2 === 0) {
+            newChangeEven.push(number+value)
+              } else {newChangeEven.push(number)}
+    });
+    return newChangeEven;
+};
+
+console.log(changeEven([2, 8, 3, 7, 4, 6], 10));
+////////////////MAP//////////////////
+const planets = ["Earth", "Mars", "Venus", "Jupiter"];
+
+const planetsLengths = planets.map(planet => planet.length);
+console.log(planetsLengths);
+//////////////////
+// const books = [
+//   {
+//     title: "The Last Kingdom",
+//     author: "Bernard Cornwell",
+//     rating: 8.38,
+//   },
+//   {
+//     title: "Beside Still Waters",
+//     author: "Robert Sheckley",
+//     rating: 8.51,
+//   },
+//   {
+//     title: "The Dream of a Ridiculous Man",
+//     author: "Fyodor Dostoevsky",
+//     rating: 7.75,
+//   },
+//   { title: "Redder Than Blood", author: "Tanith Lee", rating: 7.94 },
+//   { title: "Enemy of God", author: "Bernard Cornwell", rating: 8.67 },
+// ];
+
+// const titles = books.map(book => book.title);
+// console.log(titles);
+//////////FLATMAP////////////////////////
+// const books = [
+//   {
+//     title: "The Last Kingdom",
+//     author: "Bernard Cornwell",
+//     genres: ["adventure", "history"],
+//   },
+//   {
+//     title: "Beside Still Waters",
+//     author: "Robert Sheckley",
+//     genres: ["fiction"],
+//   },
+//   {
+//     title: "Redder Than Blood",
+//     author: "Tanith Lee",
+//     genres: ["horror", "mysticism"],
+//   },
+// ];
+
+// const genres = books.flatMap(book => book.genres);
+// console.log(genres);
+////////FILTER///////////////
+const numbers = [17, 24, 82, 61, 36, 18, 47, 52, 73];
+
+const evenNumbers = numbers.filter(number => number % 2 === 0);
+const oddNumbers = numbers.filter(number => number % 2 === 1);
+console.log(evenNumbers);
+console.log(oddNumbers);
+////////////////////////////////////
+// const books = [
+//   {
+//     title: "The Last Kingdom",
+//     author: "Bernard Cornwell",
+//     rating: 8.38,
+//   },
+//   {
+//     title: "Beside Still Waters",
+//     author: "Robert Sheckley",
+//     rating: 8.51,
+//   },
+//   {
+//     title: "The Dream of a Ridiculous Man",
+//     author: "Fyodor Dostoevsky",
+//     rating: 7.75,
+//   },
+//   { title: "Redder Than Blood", author: "Tanith Lee", rating: 7.94 },
+//   { title: "Enemy of God", author: "Bernard Cornwell", rating: 8.67 },
+// ];
+
+// const MIN_RATING = 8;
+// const AUTHOR = "Bernard Cornwell";
+
+// const topRatedBooks = books.filter(book => book.rating >= MIN_RATING);
+// const booksByAuthor = books.filter(book => book.author === AUTHOR);
+// console.log(topRatedBooks);
+// console.log(booksByAuthor);
+//////////////////////////////
+const getUsersWithAge = (users, minAge, maxAge) => {
+  return users.filter(user => user.age > minAge && user.age < maxAge)
+};
+///////////FIND////////////////////
+const books = [
+  {
+    title: "The Last Kingdom",
+    author: "Bernard Cornwell",
+    rating: 8.38,
+  },
+  {
+    title: "Beside Still Waters",
+    author: "Robert Sheckley",
+    rating: 8.51,
+  },
+  {
+    title: "The Dream of a Ridiculous Man",
+    author: "Fyodor Dostoevsky",
+    rating: 7.75,
+  },
+  { title: "Redder Than Blood", author: "Tanith Lee", rating: 7.94 },
+];
+const BOOK_TITLE = "The Dream of a Ridiculous Man";
+const AUTHOR = "Robert Sheckley";
+
+const bookWithTitle = books.find(book => book.title === BOOK_TITLE);
+const bookByAuthor = books.find(book => book.author === AUTHOR);
+
+console.log(bookWithTitle);
+console.log(bookByAuthor);
+///////EVERY/////////////////
+const isEveryUserActive = (users) => {
+  return users.every(user => user.isActive === true)
+};
+////////////SOME//////////////
+const isAnyUserActive = (users) => {
+  return users.some(user => user.isActive === true)
+};
+///////////reduce///////////////
+const players1 = {
+  mango: 1270,
+  poly: 468,
+  ajax: 710,
+  kiwi: 244,
+};
+const playtimes = Object.values(players1); // [1270, 468, 710, 244]
+
+const totalPlayTime = playtimes.reduce((total, playtime) => 
+  playtime + total, 0);
+
+const averagePlayTime = totalPlayTime / playtimes.length;
+
+console.log(totalPlayTime);
+////////////////////////////////
+const players = [
+  { name: "Mango", playtime: 1270, gamesPlayed: 4 },
+  { name: "Poly", playtime: 469, gamesPlayed: 2 },
+  { name: "Ajax", playtime: 690, gamesPlayed: 3 },
+  { name: "Kiwi", playtime: 241, gamesPlayed: 1 },
+];
+
+const totalAveragePlaytimePerGame = players.reduce((total, player) => total + player.playtime / player.gamesPlayed, 0);
+console.log(totalAveragePlaytimePerGame);
+//////////toSorted////////////
+const releaseDates1 = [2016, 1967, 2008, 1984, 1973, 2012, 1997];
+const authors = [
+  "Tanith Lee",
+  "Bernard Cornwell",
+  "Robert Sheckley",
+  "Fyodor Dostoevsky",
+];
+
+const ascendingReleaseDates1 = releaseDates1.toSorted();
+
+const alphabeticalAuthors1 = authors.toSorted();
+console.log(ascendingReleaseDates1);
+console.log(alphabeticalAuthors1);
+///////////////////////////////
+const releaseDates = [2016, 1967, 2008, 1984, 1973, 2012, 1997];
+
+const ascendingReleaseDates = releaseDates.toSorted((a, b) => a-b);
+
+const descendingReleaseDates = releaseDates.toSorted((a, b) => b - a);
+console.log(ascendingReleaseDates);
+console.log(descendingReleaseDates);
+///////////////////////////////
+const authors3 = [
+  "Tanith Lee",
+  "Bernard Cornwell",
+  "Robert Sheckley",
+  "Fyodor Dostoevsky",
+  "Howard Lovecraft",
+];
+
+const authorsInAlphabetOrder = authors3.toSorted((a,b)=> a.localeCompare(b));
+
+const authorsInReversedOrder = authors3.toSorted((a, b) => b.localeCompare(a));
+console.log(authorsInAlphabetOrder);
+console.log(authorsInReversedOrder);
+/////////////////////////////
+const books5 = [
+  {
+    title: "The Last Kingdom",
+    author: "Bernard Cornwell",
+    rating: 8.38,
+  },
+  {
+    title: "Beside Still Waters",
+    author: "Robert Sheckley",
+    rating: 8.51,
+  },
+  {
+    title: "The Dream of a Ridiculous Man",
+    author: "Fyodor Dostoevsky",
+    rating: 7.75,
+  },
+  {
+    title: "Redder Than Blood",
+    author: "Tanith Lee",
+    rating: 7.94,
+  },
+  {
+    title: "Enemy of God",
+    author: "Bernard Cornwell",
+    rating: 8.67,
+  },
+];
+
+const sortedByAuthorName = books5.toSorted((author1, author2)=> author1.author.localeCompare(author2.author));
+
+const sortedByReversedAuthorName = books5.toSorted((author1, author2)=> author2.author.localeCompare(author1.author));
+
+const sortedByAscendingRating = books5.toSorted((a,b)=> a.rating - b.rating);
+
+const sortedByDescentingRating = books5.toSorted((a, b) => b.rating - a.rating);
+console.log(sortedByAuthorName);
+console.log(sortedByReversedAuthorName);
+console.log(sortedByAscendingRating);
+console.log(sortedByDescentingRating);
+/////////////////////////////////
+const books6 = [
+  {
+    title: "The Last Kingdom",
+    author: "Bernard Cornwell",
+    rating: 8.38,
+  },
+  {
+    title: "Beside Still Waters",
+    author: "Robert Sheckley",
+    rating: 8.51,
+  },
+  {
+    title: "The Dream of a Ridiculous Man",
+    author: "Fyodor Dostoevsky",
+    rating: 7.75,
+  },
+  { title: "Redder Than Blood", author: "Tanith Lee", rating: 7.94 },
+  {
+    title: "The Dreams in the Witch House",
+    author: "Howard Lovecraft",
+    rating: 8.67,
+  },
+];
+const MIN_BOOK_RATING = 8;
+
+const names = books6.filter((book) => book.rating >= MIN_BOOK_RATING).map(book => book.author).toSorted((a, b) => a.localeCompare(b));
+console.log(names);
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
 
 
 
